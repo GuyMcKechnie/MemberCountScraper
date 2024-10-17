@@ -23,8 +23,8 @@ if response.status_code == 200:
     member_count_element = soup.find('h5', class_='_9vd5 _9scy')
 
     if member_count_element:
-        # member_count = member_count_element.text.split('|')[1].strip()
-        member_count = "Channel | 8.3K followers"
+        member_count = member_count_element.text.split('|')[1].strip()
+        # member_count = "Channel | 8.3K followers"
         member_count = member_count.split('|')[1].strip()
         member_count = member_count.split(' ')[0].strip()
         if 'K' in member_count:
